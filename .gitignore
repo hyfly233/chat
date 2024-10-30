@@ -20,3 +20,6 @@ captures
 .gradle
 .idea
 .kotlin
+/gradlew
+/gradlew.bat
+/gradle/wrapper/gradle-wrapper.jar
