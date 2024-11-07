@@ -1,14 +1,14 @@
 package com.hyfly.chat
 
-import androidx.compose.material.MaterialTheme
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import com.hyfly.chat.ui.home.Home
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import com.hyfly.chat.ui.components.BottomNavigationBar
 
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
-        BottomNavigationBar()
+        Home()
     }
 }
