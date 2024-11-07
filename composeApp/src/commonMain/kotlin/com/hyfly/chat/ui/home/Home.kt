@@ -1,33 +1,54 @@
 package com.hyfly.chat.ui.home
 
-import androidx.compose.material.BottomAppBar
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Home() {
     Scaffold(
         bottomBar = {
-            BottomAppBar(
-                contentColor = MaterialTheme.colors.onPrimary,
-                backgroundColor = MaterialTheme.colors.primary
-            ) {
-                Text(
-                    text = "BottomAppBar01",
-                    style = MaterialTheme.typography.body2
+            NavigationBar {
+                NavigationBarItem(
+                    icon = {
+                        Icon(
+                            imageVector = Icons.Default.AccountCircle,
+                            contentDescription = null
+                        )
+                    },
+                    label = {
+                        Text(
+                            text = "Home"
+                        )
+                    },
+                    selected = true,
+                    onClick = {}
                 )
-
-                Text(
-                    text = "BottomAppBar02",
-                    style = MaterialTheme.typography.body2
+                NavigationBarItem(
+                    icon = {
+                        Icon(
+                            imageVector = Icons.Default.AccountCircle,
+                            contentDescription = null
+                        )
+                    },
+                    label = {
+                        Text(
+                            text = "Chat"
+                        )
+                    },
+                    selected = false,
+                    onClick = {}
                 )
             }
+        },
+        content = { innerPadding ->
+            HomeScreen(modifier = Modifier.padding(innerPadding))
         }
-    ) {
-    }
+    )
 }
 
 @Preview
