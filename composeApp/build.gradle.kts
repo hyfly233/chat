@@ -36,17 +36,25 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.lifecycle.viewmodel)
+            implementation(libs.androidx.lifecycle.runtime.compose)
         }
         commonMain.dependencies {
-            implementation(compose.runtime)
+            implementation(compose.components.resources)
+            implementation(compose.components.uiToolingPreview)
             implementation(compose.foundation)
             implementation(compose.material)
             implementation(compose.material3)
+            implementation(compose.material3AdaptiveNavigationSuite)
+            implementation(compose.preview)
+            implementation(compose.runtime)
             implementation(compose.ui)
-            implementation(compose.components.resources)
-            implementation(compose.components.uiToolingPreview)
-            implementation(libs.androidx.lifecycle.viewmodel)
-            implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.adaptive.layout)
+            implementation(libs.adaptive.navigation)
+            implementation(libs.adaptive)
+            implementation(libs.material.navigation)
+            implementation(libs.material.navigation)
+            implementation(libs.navigation.compose)
         }
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
